@@ -1,0 +1,1 @@
+public class Enemy extends Character { private int damage; public Enemy(int d){ super(); this.damage=d;} public int getDamage(){return damage;} public String toString(){ return super.toString()+"\nDamage: "+damage;} }
