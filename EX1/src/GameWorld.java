@@ -1,1 +1,48 @@
-public class GameWorld { private String name; private Player[] players; private Enemy[] enemies; private int difficulty; public GameWorld(Player[] p, Enemy[] e, int d){ this.name="Crystalpath"; this.players=p; this.enemies=e; this.difficulty=d;} public void addPlayer(Player pl){ for(int i=0;i<players.length;i++){ if(players[i]==null){ players[i]=pl; return;}}} public void printAllPlayers(){ for(int i=0;i<players.length;i++){ if(players[i]!=null){ System.out.println("----- Player "+(i+1)+" -----"); System.out.println(players[i]);}}} public int getTotalValueOfWorld(){ int s=0; for(Player p:players){ if(p!=null) s+=p.calculateInventoryValue(); } return s;} public String toString(){ return "World Name: "+name+"\nDifficulty: "+difficulty+"\nNumber of players: "+players.length;} }
+// 204328611_207845611
+public class GameWorld 
+{ 
+  private String name; 
+  private Player[] players; 
+  private Enemy[] enemies;
+  private int difficulty; 
+  public GameWorld(Player[] p, Enemy[] e, int d)
+  { 
+    this.name="Crystalpath"; 
+    this.players=p;
+    this.enemies=e;
+    this.difficulty=d;
+  }
+  public void addPlayer(Player pl)
+  {
+    for(int i=0;i<players.length;i++)
+      { 
+        if(players[i]==null)
+          { 
+            players[i]=pl; 
+            return;
+          }
+      }
+  } 
+  public void printAllPlayers()
+  { 
+    for(int i=0;i<players.length;i++)
+      {
+        if(players[i]!=null)
+          { 
+            System.out.println("----- Player "+(i+1)+" -----"); 
+            System.out.println(players[i]);
+          }
+      }
+  }
+  public int getTotalValueOfWorld()
+    { 
+      int s=0; 
+     for(Player p:players)
+         if(p!=null) s+=p.calculateInventoryValue();
+      return s;
+    }
+  public String toString()
+  { 
+    return "World Name: "+name+"\nDifficulty: "+difficulty+"\nNumber of players: "+players.length;
+  } 
+}
