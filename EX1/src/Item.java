@@ -1,1 +1,28 @@
-public class Item { private String name="Unknown"; private int value=0; private boolean isMagical=false; public Item(){} public String getName(){return name;} public int getValue(){return value;} public void setValue(int v){ if(v>=0)value=v;} public boolean isMagical(){return isMagical;} public String toString(){return "Name: "+name+"\nValue: "+value + (isMagical?"\nMagical item":"");}}
+// 204328611_207845611
+public class Item 
+{
+  private String name="Unknown"; 
+  private int value=0; 
+  private boolean isMagical=false; 
+  public Item(){} 
+  public String getName()
+  {
+    return name;
+  } 
+  public int getValue()
+  {
+    return value;
+  }
+  public void setValue(int v)
+  { 
+    if(v>=0) value=v;
+  } 
+  public boolean isMagical()
+  {
+    return isMagical;
+  } 
+  public String toString()
+  {
+    return "Name: "+name+"\nValue: "+value + (isMagical?"\nMagical item":"");
+  }
+}
